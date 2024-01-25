@@ -4,9 +4,11 @@ District-HeatIndex-Predication-using-LSTM
 
 # Model Compare Tabel:
 
-model   | Feature No.  | Actule HEAT_INDEX | Predicted HEAT_INDEX | Mean Absolute Error
-
-1           8               74.71               73.28               1.430001 %
+| Model | Feature No. | Predicted HEAT_INDEX | Actual HEAT_INDEX | Mean Absolute Error |
+|--------------|----------------------|----------------------|----------------------|
+| **1** | 8  | 73.28 | 74.71 | 1.43% |
+| **2** | 4  | 74.79 | 74.71 | 0.08% |
+| **3** | 24 | 73.78 | 74.71 | 0.93% |
 
 
 

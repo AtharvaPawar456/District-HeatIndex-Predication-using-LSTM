@@ -2,7 +2,7 @@
 District-HeatIndex-Predication-using-LSTM
 
 
-# Model Compare Tabel:
+# Model Compare Table:
 
 | Model | Feature No. | Test Loss | Test Accuracy | Predicted HEAT_INDEX | Actual HEAT_INDEX | Mean Absolute Error |
 |-------|-------------|-----------|---------------|----------------------|-------------------|---------------------|
@@ -69,15 +69,38 @@ This project utilizes LSTM models to predict Heat Index, comparing performance w
 ## About Dataset:
 
 ### Features:
-- T2M: Temperature at 2 meters (in degrees Celsius).
-- T_Fahrenheit: Temperature at 2 meters converted to Fahrenheit.
-- TS: Surface temperature (in degrees Celsius).
-- ... (Other features listed in the dataset)
+- **T2M** : Temperature at 2 meters (in degrees Celsius).
+- **T_Fahrenheit** : Temperature at 2 meters converted to Fahrenheit.
+- **TS** : Surface temperature (in degrees Celsius).
+- **T2M_MIN** : Minimum temperature at 2 meters (in degrees Celsius).
+- **T2M_MAX** : Maximum temperature at 2 meters (in degrees Celsius).
+- **T2MWET** : Wet-bulb temperature at 2 meters (in degrees Celsius).
+- **WS10M_RANGE** : Wind speed at 10 meters range (difference between maximum and minimum) (in meters per second).
+- **WD50M** : Wind direction at 50 meters (in degrees).
+- **WD10M** : Wind direction at 10 meters (in degrees).
+- **WS10M_MAX** : Maximum wind speed at 10 meters (in meters per second).
+- **RH2M** : Relative humidity at 2 meters (percentage).
+- **MO** : Month.
+- **WS10M** : Wind speed at 10 meters (in meters per second).
+- **T2MDEW** : Dew point temperature at 2 meters (in degrees Celsius).
+- **QV2M** : Specific humidity at 2 meters (in grams per kilogram).
+- **WS50M** : Wind speed at 50 meters (in meters per second).
+- **LON** : Longitude.
+- **DISTRICT_INDEX** : Numerical index representing the district.
+- **LAT** : Latitude.
+- **PS** : Surface pressure (in pascals).
+- **PRECTOTCORR** : Corrected total precipitation (in millimeters).
+- **YEAR** : Year.
+- **T2M_RANGE** : Temperature range at 2 meters (in degrees Celsius).
+- **DY** : Day.
+- **WS10M_MIN** : Minimum wind speed at 10 meters (in meters per second).
 
 ### Dataset Information:
 - Rows: 125,060
 - Columns: 25
 - Memory Usage: 23.9 MB
+
+
 
 ## About LSTM Algo:
 
@@ -114,7 +137,7 @@ LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) design
 - Extend to Multiple Locations
 
 
-# ------------------------------------------------------
+# --------------------------------------------------------------
 
 # Model 1: (8 Feature)
 
@@ -135,9 +158,7 @@ LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) design
 
 - Output
 `Predicted HEAT_INDEX:	 73.28
-
 Actual HEAT_INDEX: 	 74.71
-
 Mean Absolute Error: 1.430001 %`
 
 # Model 2: (4 Feature)
@@ -155,9 +176,7 @@ Mean Absolute Error: 1.430001 %`
 
 - Output
 `Predicted HEAT_INDEX:	 74.79
-
 Actual HEAT_INDEX: 	 74.71
-
 Mean Absolute Error: 0.080001 %`
 
 
@@ -197,7 +216,5 @@ Mean Absolute Error: 0.080001 %`
 
 - Output
 `Predicted HEAT_INDEX:	 73.8
-
 Actual HEAT_INDEX: 	 74.71
-
 Mean Absolute Error: 0.909997 %`

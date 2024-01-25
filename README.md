@@ -4,13 +4,117 @@ District-HeatIndex-Predication-using-LSTM
 
 # Model Compare Tabel:
 
-| Model | Feature No. | Predicted HEAT_INDEX | Actual HEAT_INDEX | Mean Absolute Error |
-|-------|-------------|----------------------|-------------------|---------------------|
-| **1** | 8  | 73.28 | 74.71 | 1.43% |
-| **2** | 4  | 74.79 | 74.71 | 0.08% |
-| **3** | 24 | 73.78 | 74.71 | 0.93% |
+| Model | Feature No. | Test Loss | Test Accuracy | Predicted HEAT_INDEX | Actual HEAT_INDEX | Mean Absolute Error |
+|-------|-------------|-----------|---------------|----------------------|-------------------|---------------------|
+| **1** | 8  | 1.52 | 90.45 | 73.28 | 74.71 | 1.43% |
+| **2** | 4  | 1.50 | 90.16 | 74.79 | 74.71 | 0.08% |
+| **3** | 25 | 0.34 | 40.56 | 73.9 | 74.71 | 0.91% |
+
+- model 2 shows best performance as its Mean Absolute Error is very less than Model 1 and Model 3...
+
+# Features for each Model:
+
+- **Model 1** : 
+    `['T2M', 'T_Fahrenheit', 'TS', 'T2M_MIN', 'T2M_MAX', 'T2MWET', 'WS10M_RANGE', 'DISTRICT_INDEX']`
+- **Model 2** : 
+    `['T2M','RH2M', 'T2MDEW', 'WD10M']`
+- **Model 3** : 
+    `['T2M', 'T_Fahrenheit', 'TS', 'T2M_MIN', 'T2M_MAX', 'T2MWET', 'WS10M_RANGE', 'WD50M', 'WD10M', 'WS10M_MAX', 'RH2M', 'MO', 'WS10M', 'T2MDEW', 'QV2M', 'WS50M', 'LON', 'DISTRICT_INDEX', 'LAT', 'PS', 'PRECTOTCORR', 'YEAR', 'T2M_RANGE', 'DY', 'WS10M_MIN']`
 
 
+
+## Project Overview:
+
+### Title:
+HeatIndex Prediction using LSTM
+
+### Description:
+LSTM models predict Heat Index with varying feature sets. Model 2 excels, showcasing superior performance with fewer features.
+
+### Problem Statement:
+Predict Heat Index based on meteorological features for improved understanding of weather conditions and human comfort.
+
+### Abstract:
+This project utilizes LSTM models to predict Heat Index, comparing performance with different feature sets. Model 2, with 4 selected features, outperforms others.
+
+### Application:
+- Weather Forecasting
+- Urban Planning
+- Health and Safety
+- Agriculture
+- Energy Consumption
+- Outdoor Event Planning
+
+### Advantages:
+- Accurate Heat Index Prediction
+- Reduced Model Complexity (Model 2)
+- Better Interpretability (Model 2)
+- Faster Training and Inference (Model 2)
+- Improved Resource Efficiency
+
+### Limitations:
+- Limited Feature Set
+- Potential Overfitting
+- Sensitivity to Input Data Quality
+- Lack of External Factors
+- Model Generalization Challenges
+
+### Future Scope:
+- Include Additional Relevant Features
+- Explore Advanced LSTM Architectures
+- Fine-Tune Hyperparameters
+- Integrate External Data Sources
+- Develop Real-time Prediction Capability
+
+## About Dataset:
+
+### Features:
+- T2M: Temperature at 2 meters (in degrees Celsius).
+- T_Fahrenheit: Temperature at 2 meters converted to Fahrenheit.
+- TS: Surface temperature (in degrees Celsius).
+- ... (Other features listed in the dataset)
+
+### Dataset Information:
+- Rows: 125,060
+- Columns: 25
+- Memory Usage: 23.9 MB
+
+## About LSTM Algo:
+
+### Explaination
+LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) designed for sequence prediction. In our project, LSTM is applied to time-series meteorological data to learn patterns and predict heat index.
+
+### Application
+- Meteorological Forecasting
+- Public Health Planning
+- Urban Planning for Heat Resilience
+- Agriculture Heat Stress Monitoring
+- Energy Consumption Forecasting
+- Outdoor Event Planning
+
+### Advantages
+- Captures Long-Term Dependencies
+- Handles Time-Series Data Effectively
+- Suitable for Complex Patterns
+- Avoids Vanishing Gradient Problem
+- Allows End-to-End Learning
+
+### Limitations
+- Requires Sufficient Data
+- May Overfit with Limited Data
+- Computationally Intensive
+- Hyperparameter Sensitivity
+- Limited Interpretability
+
+### Future Scope
+- Enhance Model Robustness
+- Incorporate Additional Features
+- Explore Ensemble Approaches
+- Integrate Real-Time Data
+- Extend to Multiple Locations
+
+
+# ------------------------------------------------------
 
 # Model 1: (8 Feature)
 
